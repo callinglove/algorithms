@@ -24,7 +24,7 @@ public class Dijkstra {
 	};
 
 	/*
-	 * dijkstra算法 v表示源点位置
+	 * dijkstra算法 source表示源点位置
 	 */
 	public void dijkstra(int source, int[][] a, int dist[], int prve[]) {
 		int len = dist.length;
@@ -45,7 +45,6 @@ public class Dijkstra {
 
 		dist[source] = 0; // 初始化v0源点属于s集
 		isVisited[source] = true; // 表示v0源点已经求得最短路径
-		prve[source] = source;
 
 		for (int i = 0; i < len; i++) {
 			int min = Integer.MAX_VALUE; // temp暂存v0源点到vi顶点的最短路径
